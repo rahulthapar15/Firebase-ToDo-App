@@ -147,3 +147,56 @@ body{
   border-right: 1px solid #cdcdcd;
   border-left: 1px solid #303030;
 }
+
+.wrapper {
+  margin: 3em auto;
+  max-width: 90%;
+  max-height: 90%;
+  padding: 0 1em;
+  overflow: auto;
+}
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.post {
+  height: 100px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1 300px;
+  padding: 0.2em;
+  margin: 0.2em;
+  border-radius: .5em;
+  transition: transform .5s;
+  overflow: auto;
+  /* overflow-y: scroll;
+  overflow-x:hidden;  */
+}
+.post p {
+  font-size: 1em;
+  font-weight: 500;
+  backface-visibility: hidden;
+}
+
+.post a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+.post svg {
+  width: 4em;
+  fill: black;
+  margin-bottom: 2em;
+  margin-left: 2px;
+}
+.p0 {
+    background: #222222;  
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
