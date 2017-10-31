@@ -1,3 +1,149 @@
 body{
     background: white;
 }
+.iphone-x {
+  height: 604px;
+  width: 307px;
+  background-image: -webkit-linear-gradient(top, white 0%, white 1%, black 2%, white 5%, white 95%, black 98%, white 99%, white 100%);
+  background-image: linear-gradient(top, white 0%, white 1%, black 2%, white 5%, white 95%, black 98%, white 99%, white 100%);
+  margin: 10px auto;
+  border-radius: 55px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+
+.divider {
+  background: #aaaaaa;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+}
+.divider:first-of-type {
+  top: 9%;
+}
+.divider:last-of-type {
+  bottom: 9%;
+}
+
+.bezel {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background: #565656;
+  background-image: -webkit-linear-gradient(top, #6a6a6a 0%, black 1%, #565656 4%, #565656 96%, black 99%, #6a6a6a 100%);
+  background-image: linear-gradient(top, #6a6a6a 0%, black 1%, #565656 4%, #565656 96%, black 99%, #6a6a6a 100%);
+  position: relative;
+  left: 5px;
+  top: 5px;
+  border-radius: 48px;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-top: 3px solid #484848;
+  border-bottom: 3px solid #0d0d0d;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 7px 0px rgba(190, 190, 190, 0.8);
+  z-index: 2;
+}
+.bezel::after {
+  content: "";
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  background: #000;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  border-radius: 40px;
+}
+
+.screen {
+  z-index: 3;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  background: -webkit-linear-gradient(315deg, #d43f81, #1d368a);
+  background: linear-gradient(135deg, #d43f81, #1d368a);
+  background-image: -webkit-radial-gradient(top right circle, #f9f6f2 1%, #d43f81 15%, #1d368a 60%, #f9f6f2 100%);
+  background-image: radial-gradient(circle at top right, #f9f6f2 1%, #d43f81 15%, #1d368a 60%, #f9f6f2 100%);
+  background-size: cover;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-radius: 35px;
+  overflow: hidden;
+}
+.screen::after {
+  content: '';
+  width: 56%;
+  height: 4%;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 0 0 20px 20px;
+}
+
+.speaker {
+  width: 48px;
+  height: 5px;
+  position: absolute;
+  background: #1c1c1c;
+  top: 3.75%;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+.camera {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 4;
+  top: 3.5%;
+  right: 38%;
+  background-image: -webkit-radial-gradient(center, #021a3c 0%, #313e4f 8%, #1f3e6c 21%, #021a3c 56%, #021a3c 100%);
+  background-image: radial-gradient(center, #021a3c 0%, #313e4f 8%, #1f3e6c 21%, #021a3c 56%, #021a3c 100%);
+}
+
+.button {
+  width: 4px;
+  position: absolute;
+  z-index: 5;
+  background-image: -webkit-linear-gradient(top, black 0%, #f4f4f4 15%, #f4f4f4 85%, black 100%);
+  background-image: linear-gradient(top, black 0%, #f4f4f4 15%, #f4f4f4 85%, black 100%);
+  box-sizing: border-box;
+  border-left: 1px solid #cdcdcd;
+  border-right: 1px solid #303030;
+}
+
+.button.mute {
+  height: 28px;
+  top: 13%;
+  left: -4px;
+}
+
+.button.vol-up,
+.button.vol-down {
+  height: 53px;
+  left: -4px;
+}
+
+.button.vol-up {
+  top: 21%;
+}
+
+.button.vol-down {
+  top: 30%;
+}
+
+.button.right {
+  right: -4px;
+  height: 84px;
+  top: 23.5%;
+  border-right: 1px solid #cdcdcd;
+  border-left: 1px solid #303030;
+}
