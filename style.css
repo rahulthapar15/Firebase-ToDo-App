@@ -1,3 +1,7 @@
+html{
+
+    overflow-x:hidden;
+}
 body{
     background: white;
 }
@@ -153,6 +157,13 @@ body{
   max-width: 90%;
   max-height: 90%;
   padding: 0 1em;
+  overflow: auto;
+}
+.wrapper2 {
+  margin: 3em auto;
+  max-width: 70%;
+  max-height: 100%;
+  padding: 0 0.1em;
   overflow: auto;
 }
 .posts {
