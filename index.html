@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
 
+        <link rel="stylesheet" href="animation.css">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
         crossorigin="anonymous"></script>
@@ -30,7 +33,7 @@
 
         <div class="wrapper">
             <div class="posts">
-                <div class="post p0">
+                <div id="todo_card" class="post p0 slideUp">
                     <a href="#" target="_blank">
                         <p></p>
                     </a>
@@ -61,11 +64,13 @@
         
     </div>
     <div class="form-group">
-        <!-- <input type="text" class="form-control" id="todo" style="width:20%;margin-left:7%; color: white;
-        text-align:center;"> -->
         <textarea class='autoExpand' id="todo" rows='3' data-min-rows='3' placeholder='ToDo ...'
-        style="border-radius:17px;padding:1%;max-height:220px ; color:white;text-align:center;"></textarea>
+        style="border-radius:17px;padding:1%;max-height:220px; max-width:800px; ; color:white;text-align:center;"></textarea>
     </div>
+
+    <!-- <button type="button" class="btn btn-default btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></button> -->
+    <button type="button" class="btn btn-outline-info">Submit</button>
+
 </div>
 </div>
 <script src="app.js"></script>

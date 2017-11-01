@@ -208,6 +208,11 @@ body{
     background: #222222;  
 }
 
+#todo_card{
+    visibility: hidden;
+}
+
+
 /* expanding input CSS only */
 #todo		{
   width:130px;
