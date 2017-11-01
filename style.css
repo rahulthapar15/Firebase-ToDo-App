@@ -161,7 +161,7 @@ body{
 }
 .wrapper2 {
   margin: 3em auto;
-  max-width: 70%;
+  max-width: 40%;
   max-height: 100%;
   padding: 0 0.1em;
   overflow: auto;
@@ -206,8 +206,4 @@ body{
 }
 .p0 {
     background: #222222;  
-}
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
 }
