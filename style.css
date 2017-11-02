@@ -184,6 +184,7 @@ body{
   border-radius: .5em;
   transition: transform .5s;
   overflow: auto;
+  color:white;
   /* overflow-y: scroll;
   overflow-x:hidden;  */
 }

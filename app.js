@@ -36,5 +36,5 @@ data_ref.on("child_added", snap => {
     // $(".post").append("<p>" + mStore + "</p>");
 
     $('#todo_cards').append("<div class='post p0'>"+mStore+"</div>");
-    window.alert(mStore);
+    // window.alert(mStore);
 });
