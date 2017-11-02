@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
 
-        <link rel="stylesheet" href="animation.css">
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
@@ -32,10 +32,10 @@
     <div class="screen" style="background : white;">
 
         <div class="wrapper">
-            <div class="posts">
-                <div id="todo_card" class="post p0 slideUp">
+            <div id="todo_cards" class="posts">
+                <div id="one" class="post p0">
                     <a href="#" target="_blank">
-                        <p></p>
+                        <p>loi</p>
                     </a>
                 </div>
             </div>
@@ -69,10 +69,25 @@
     </div>
 
     <!-- <button type="button" class="btn btn-default btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></button> -->
-    <button type="button" class="btn btn-outline-info">Submit</button>
+    <button type="button" id="submitBtn" onclick="submitCard()" class="btn btn-outline-info">Submit</button>
 
 </div>
 </div>
+
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyD0HDzrXxEutwhij2lGOPIcqHTgXTDKLCw",
+        authDomain: "todo-1345.firebaseapp.com",
+        databaseURL: "https://todo-1345.firebaseio.com",
+        projectId: "todo-1345",
+        storageBucket: "",
+        messagingSenderId: "607752140286"
+    };
+    firebase.initializeApp(config);
+
+</script>
 <script src="app.js"></script>
 </body>
 </html>
