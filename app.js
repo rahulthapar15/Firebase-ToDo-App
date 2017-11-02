@@ -21,7 +21,25 @@ function submitCard(){
         var mText = text.value;
         ref.child("List").push().set(mText);
         window.alert(text.value);
+        addtoPhone();
         text.value = "";
         todo.value = "";
     }
+}
+
+//GET data from Firebase and add to Phone Screen
+// Refer to Database -> List
+var data_ref = firebase.database().ref().child("List");
+function addtoPhone(){
+
+    data_ref.on("child_added",snap =>{
+
+        // Iterate over all records in DB and take the snapshot
+        var mStore = snap.val();
+        //add to Phone screen
+       $("#todo_cards").append("<p>"+mStore+"</p>");
+       window.alert(mStore);
+    });
+
+
 }

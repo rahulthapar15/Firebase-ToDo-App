@@ -191,6 +191,9 @@ body{
   font-size: 1em;
   font-weight: 500;
   backface-visibility: hidden;
+    text-decoration: none;
+  color: white;
+  display: block;
 }
 
 .post a {
