@@ -12,6 +12,9 @@ var ref = firebase.database().ref();
 //Pushing data into firebase
 var submitBtn = document.getElementById("submitBtn");
 var todo = document.getElementById("todo");
+var data_ref = firebase.database().ref().child("List");
+
+
 function submitCard(){
 
     if (!$.trim($("#card_text").val())) {
@@ -20,26 +23,18 @@ function submitCard(){
     }else{
         var mText = text.value;
         ref.child("List").push().set(mText);
-        window.alert(text.value);
-        addtoPhone();
         text.value = "";
         todo.value = "";
     }
 }
 
-//GET data from Firebase and add to Phone Screen
-// Refer to Database -> List
-var data_ref = firebase.database().ref().child("List");
-function addtoPhone(){
+data_ref.on("child_added", snap => {
 
-    data_ref.on("child_added",snap =>{
+    // Iterate over all records in DB and take the snapshot
+    var mStore = snap.val();
+    //add to Phone screen
+    // $(".post").append("<p>" + mStore + "</p>");
 
-        // Iterate over all records in DB and take the snapshot
-        var mStore = snap.val();
-        //add to Phone screen
-       $("#todo_cards").append("<p>"+mStore+"</p>");
-       window.alert(mStore);
-    });
-
-
-}
+    $('#todo_cards').append("<div class='post p0'>"+mStore+"</div>");
+    window.alert(mStore);
+});
