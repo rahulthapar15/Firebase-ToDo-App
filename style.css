@@ -193,8 +193,8 @@ body{
   font-weight: 500;
   backface-visibility: hidden;
     text-decoration: none;
-  color: white;
   display: block;
+  color: white;
 }
 
 .post a {
