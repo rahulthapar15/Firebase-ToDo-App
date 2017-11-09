@@ -33,8 +33,15 @@ data_ref.on("child_added", snap => {
     // Iterate over all records in DB and take the snapshot
     var mStore = snap.val();
     //add to Phone screen
-    // $(".post").append("<p>" + mStore + "</p>");
-
-    $('#todo_cards').append("<div class='post p0'>"+mStore+"</div>");
-    // window.alert(mStore);
+    $('#todo_cards').before("<div class='post p0'>"+mStore+"</div>");
 });
+
+//DELETE ALL RECORDS FROM FIREBASE
+
+// 1. Create a reference to Firebase Child : List
+var ref_del = firebase.database().ref('List');
+function Reset(){
+
+    ref_del.remove();
+    window.location.reload();
+}

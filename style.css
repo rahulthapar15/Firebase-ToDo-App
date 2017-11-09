@@ -202,11 +202,11 @@ body{
   color: white;
   display: block;
 }
-.post svg {
-  width: 4em;
-  fill: black;
+.post img {
+  width: 18px;
+  fill: white;
   margin-bottom: 2em;
-  margin-left: 2px;
+  margin-left: 90%;
 }
 .p0 {
     background: #222222;  
